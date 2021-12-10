@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel&family=Fredoka+One&family=Fugaz+One&family=Kanit:wght@500&family=Neuton&family=Open+Sans:wght@600;700&family=Raleway:wght@500&family=Righteous&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+font-family: 'Raleway', sans-serif;
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    background: url(./assets/fondo.jpg);
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size: cover;
+}
+
+.logo{
+    height: 200px;
+    margin: 30px 0 0 20px; 
+}
+
+nav{
+    height: 170px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.barBtn{
+    font-size: 25px;
+    color: #ffff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.navMenu{
+    position: fixed;
+    width: 100%;
+    height: 0vh;
+    top: 100px;
+    background: rgb( 6, 214, 160);
+    text-align: center;
+    transition: all .5s;
+}
+
+.navMenu li{
+    display: none;
+    line-height: 30px;
+    margin: 50px 0;
+    transition: all .5s;
+}
+
+.navMenu li a{
+    color: #ffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.navMenu li, a.active, .navMenu li a:hover{
+    color: rgb(239, 71, 111);
+    transition: .3s;
+}
+
+#check{
+    display: none;
+   
+}
+
+#check:checked ~ .navMenu{
+    height: 100vh;
+}
+
+#check:checked ~ .navMenu li {
+    display: block;
+}
